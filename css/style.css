@@ -1529,8 +1529,6 @@
 
   .eight__blur::before{
     background: url('../img/bg_8.jpg') right no-repeat;
-    background-size: 230%;
-    background-position: 60% 400%;
     filter: blur(15px);
   }
 
