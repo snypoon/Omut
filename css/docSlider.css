@@ -89,5 +89,5 @@ html:active, body:active,
   width: inherit;
   overflow: auto;
   position: absolute;
-  overflow-scrolling: touch;
+  /* overflow-scrolling: touch; */
 }
