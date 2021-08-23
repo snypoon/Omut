@@ -1,14 +1,10 @@
-const main = document.querySelector('.main');
 const contactsBtn = document.querySelector('.nav__contacts');
 const aboutBtn = document.querySelector('.nav__about');
 const backBtn = document.querySelector('.nav__back');
 const navLogo = document.querySelector('.nav__logo');
 const menu = document.querySelector('.menu');
 const works = document.querySelector('.scroll__container');
-const firstPageBlur = document.querySelector('.one__blur')
 
-const mainActiveAdd = () => { main.classList.add('main-active');};
-const mainActiveDel = () => { main.classList.remove('main-active');};
 const menuActive = () =>{
   menu.classList.add('menu-active');
   works.classList.add('scroll__container-hidden');
@@ -24,22 +20,6 @@ const menuClose = () => {
   backBtn.classList.remove('nav__back-active');
 }
 
-main.addEventListener('click', function(e){
-  e.preventDefault();
-  mainActiveAdd();
-  firstPageBlur.classList.add('blur-active')
-})
-
-contactsBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  mainActiveDel();
-})
-
-navLogo.addEventListener('click', function(e){
-  e.preventDefault();
-  mainActiveDel();
-})
-
 aboutBtn.addEventListener('click', function(e){
   e.preventDefault();
   menuActive();
@@ -51,7 +31,8 @@ backBtn.addEventListener('click', function(e){
 });
 
 // Full Page Scroll
-
+const screenOne = document.querySelector('.work__one');
+const blueScreenOne = document.querySelector('.one__blur');
 const screenTwo = document.querySelector('.work__two');
 const blueScreenTwo = document.querySelector('.two__blur');
 const screenThree = document.querySelector('.work__three');
@@ -71,6 +52,9 @@ docSlider.init({
   speed : 1000,
   pager: false,
   beforeChange: function(){
+    if(screenOne.classList.contains('docSlider-current')){
+      blueScreenOne.classList.add('blur-active');
+    };
     if(screenTwo.classList.contains('docSlider-current')){
       blueScreenTwo.classList.add('blur-active');
     };
