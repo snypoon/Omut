@@ -43,8 +43,8 @@
   REWRITING IS NOT RECOMMENDED
  -----------------------------**/
 html, body {
-  overflow: initial;
-  /* touch-action: none; */
+  overflow: hidden;
+  touch-action: none;
   height: 100%;
 }
 
@@ -89,5 +89,5 @@ html:active, body:active,
   width: inherit;
   overflow: auto;
   position: absolute;
-  /* overflow-scrolling: touch; */
+  overflow-scrolling: touch;
 }
