@@ -93,7 +93,7 @@
   }
 
   .main::after{
-    background-size: contain;
+    background-size: 100% 100%;
   }
 
   .main__center{
