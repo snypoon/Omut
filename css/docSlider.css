@@ -44,7 +44,7 @@
  -----------------------------**/
 html, body {
   overflow: initial;
-  touch-action: none;
+  /* touch-action: none; */
   height: 100%;
 }
 
