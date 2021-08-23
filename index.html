@@ -4,14 +4,15 @@
   <meta charset="UTF-8" http-equiv="Cache-Control" content="no-cache">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/docSlider.css">
   <title>OMUT STUDIO</title>
 </head>
 <body>
   <div class="nav">
-    <img class="nav__logo" src="img/znak.svg" alt="logo">
+    <a href="#main"><img class="nav__logo" src="img/znak.svg" alt="logo"></a>
     <div class="nav__links">
       <a href="#" class="nav__link nav__about">About</a>
-      <a href="#" class="nav__link nav__contacts">Contacts</a>
+      <a href="#main" class="nav__link nav__contacts">Contacts</a>
       <a href="#" class="nav__link nav__back">Back</a>
     </div>
     <div class="nav__links_mob">
@@ -20,32 +21,6 @@
     </div>
   </div>
   <div class="container">
-    <div class="main active">
-      <div class="main__top"></div>
-      <div class="main__center">
-        <img class="main__logo" src="img/logo-vector.svg" alt="logo">
-        <img class="main__click" src="img/click.svg" alt="img">
-        <div class="main__subtitle">Based in Berlin and Moscow, <br> we are an independent full-service <br> video production company</div>
-      </div>
-      <div class="main__footer">
-        <div class="main__col">
-          <div class="main__info">© 2021 OMUT</div>
-          <div class="main__info">info@omut.eu</div>
-        </div>
-        <div class="main__col">
-          <div class="main__info">MOSCOW</div>
-          <div class="main__info">BERLIN</div>
-        </div>
-        <div class="main__col">
-          <div class="main__info">Kamergersky lane, 2 <br> 125009, Moscow</div>
-          <div class="main__info">Karmeliterweg 9 <br> D - 13465 Berlin</div>
-        </div>
-        <div class="main__col">
-          <div class="main__info">+7 495 109 33 72</div>
-          <div class="main__info">+49 30 5629290 30 <br> +49 30 5629290 31</div>
-        </div>
-      </div>
-    </div>
     <div class="menu">
       <div class="menu__title">
         <div class="menu__words_col">
@@ -102,7 +77,32 @@
         </div>
       </div>
     </div>
-    <div class="scroll__container" id="well">
+    <div class="scroll__container docSlider" id="well">
+      <section class="panel main" id="main">
+        <div class="main__top"></div>
+        <div class="main__center">
+          <img class="main__logo" src="img/logo-vector.svg" alt="logo">
+          <div class="main__subtitle">Based in Berlin and Moscow, <br> we are an independent full-service <br> video production company</div>
+        </div>
+        <div class="main__footer">
+          <div class="main__col">
+            <div class="main__info">© 2021 OMUT</div>
+            <div class="main__info">info@omut.eu</div>
+          </div>
+          <div class="main__col">
+            <div class="main__info">MOSCOW</div>
+            <div class="main__info">BERLIN</div>
+          </div>
+          <div class="main__col">
+            <div class="main__info">Kamergersky lane, 2 <br> 125009, Moscow</div>
+            <div class="main__info">Karmeliterweg 9 <br> D - 13465 Berlin</div>
+          </div>
+          <div class="main__col">
+            <div class="main__info">+7 495 109 33 72</div>
+            <div class="main__info">+49 30 5629290 30 <br> +49 30 5629290 31</div>
+          </div>
+        </div>
+      </section>
       <section class="panel work__one">
         <div class="one__blur">
           <div class="one__title">Molchat Doma</div>
@@ -266,11 +266,8 @@
     <div class="scroll__icon">
       <img class="scroll__img" src="img/scroll.svg" alt="scroll">
     </div>
-    <div class="scroll__icon_mob">
-      <div class="scroll__img_mob">scroll</div>
-    </div>
   </div>
-  
+  <script src="js/docSlider.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
