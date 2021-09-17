@@ -1,112 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" http-equiv="Cache-Control" content="no-cache">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/docSlider.css">
+  <link type="image/x-icon" rel="shortcut icon" href="img/znak.svg">
   <title>OMUT STUDIO</title>
 </head>
 <body>
   <div class="nav">
     <img class="nav__logo" src="img/znak.svg" alt="logo">
     <div class="nav__links">
-      <a href="#" class="nav__link nav__about">About</a>
+      <a href="./about.html" class="nav__link nav__about">About</a>
       <a href="#" class="nav__link nav__contacts">Contacts</a>
       <a href="#" class="nav__link nav__back">Back</a>
-    </div>
-    <div class="nav__links_mob">
-      <img class="nav__link_mob" src="img/info.svg" alt="info">
-      <img class="nav__link_mob" src="img/phone.svg" alt="phone">
+      <div class="nav__links_mob">
+        <a href="./about.html"><img class="nav__link_mob nav__link_info" src="img/info.svg" alt="info"></a>
+        <img class="nav__link_mob nav__link_phone" src="img/phone.svg" alt="phone">
+      </div>
     </div>
   </div>
   <div class="container">
-    <div class="main active">
-      <div class="main__top"></div>
-      <div class="main__center">
-        <img class="main__logo" src="img/logo-vector.svg" alt="logo">
-        <img class="main__click" src="img/click.svg" alt="img">
-        <div class="main__subtitle">Based in Berlin and Moscow, <br> we are an independent full-service <br> video production company</div>
-      </div>
-      <div class="main__footer">
-        <div class="main__col">
-          <div class="main__info">© 2021 OMUT</div>
-          <div class="main__info">info@omut.eu</div>
+    <div class="scroll__container docSlider" id="well">
+      <section class="panel main" id="main">
+        <div class="main__top"></div>
+        <div class="main__center">
+          <img class="main__logo" src="img/logo-vector.svg" alt="logo">
+          <h1 class="main__subtitle">Based in Berlin and Moscow, <br> we are an independent full-service <br> video production company</h1>
         </div>
-        <div class="main__col">
-          <div class="main__info">MOSCOW</div>
-          <div class="main__info">BERLIN</div>
-        </div>
-        <div class="main__col">
-          <div class="main__info">Kamergersky lane, 2 <br> 125009, Moscow</div>
-          <div class="main__info">Karmeliterweg 9 <br> D - 13465 Berlin</div>
-        </div>
-        <div class="main__col">
-          <div class="main__info">+7 495 109 33 72</div>
-          <div class="main__info">+49 30 5629290 30 <br> +49 30 5629290 31</div>
-        </div>
-      </div>
-    </div>
-    <div class="menu">
-      <div class="menu__title">
-        <div class="menu__words_col">
-          <div class="menu__word_title">Неклассическое</div>
-          <div class="menu__word_subtitle">повествование</div>
-        </div>
-        <div class="menu__words_col">
-          <div class="menu__word_subtitle top">Постмодерн</div>
-          <div class="menu__word_title right">Мрачная</div>
-          <div class="menu__word_subtitle bottom">сказка</div>
-        </div>
-      </div>
-      <div class="menu__subtitle">Видеопродакшн полного цикла с командой в Москве и Берлине</div>
-      <ul class="menu__list">
-        <li class="menu__item one">Работаем с актуальными артистами <br> и готовы предложить нетривиальный <br>  подход брендам, которые готовы <br> 
-          к поиску новых визуальных форм <br> 
-          в диалоге со своей аудиторией</li>
-        <li class="menu__item two">Снимаем музыкальные клипы <br> 
-          и коммерцию с сильной арт <br> составляющей</li>
-        <li class="menu__item three">Работаем с брендами и артистами, которые <br>  не боятся экспериментировать и готовы <br> снимать контент с провокативной тематикой, <br>  необычными визуальными эффектами, <br> неклассическим повествованием.</li>
-      </ul>
-      <div class="menu__team">
-        <div class="team__col">
-          <div class="team__person">
-            <img src="img/photo_1.png" class="team__photo"></img>
-            <div class="team__name">Александр</div>
-            <div class="team__lastname">Столетов</div>
-            <div class="team__position">Генеральный продюсер</div>
-            <div class="team__text">Увлечен новыми форматами социального взаимодействия в искусстве, в том числе, через иммерсивный виртуальный опыт. Работает с кино, анимацией, а также VR/AR проектами в Москве и Берлине. </div>
+        <div class="main__footer">
+          <div class="main__col">
+            <div class="main__info">© 2021 OMUT</div>
+            <a href="mailto:info@omut.eu" class="main__info">info@omut.eu</a>
           </div>
-          <div class="team__person">
-            <img src="img/photo_3.png" class="team__photo"></img>
-            <div class="team__name three">Валерия</div>
-            <div class="team__lastname three">Йонсен</div>
-            <div class="team__position">Оператор-постановщик</div>
-            <div class="team__text">В своем визуальном языке придерживается атмосферы мрачной и сказочной эстетики.</div>
+          <div class="main__col">
+            <div class="main__info">MOSCOW</div>
+            <div class="main__info">BERLIN</div>
+          </div>
+          <div class="main__col">
+            <div class="main__info">Kamergersky lane, 2 <br> 125009, Moscow</div>
+            <div class="main__info">Karmeliterweg 9 <br> D - 13465 Berlin</div>
+          </div>
+          <div class="main__col">
+            <a href="tel:+74951093372" class="main__info">+7 495 109 33 72</a>
+            <a href="tel:+4930562929030" class="main__info">+49 30 5629290 30</a>
           </div>
         </div>
-        <div class="team__col">
-          <div class="team__person">
-            <img src="img/photo_2.png" class="team__photo"></img>
-            <div class="team__name two">Марина</div>
-            <div class="team__lastname two">Буланцева </div>
-            <div class="team__position">Креативный продюсер </div>
-            <div class="team__text">видео, арт- и медиапроектов. Из тьмы и хаоса проявляет идеи, объединяет вокруг себя талантливых людей, чтобы вместе создавать миры невероятной сложности и красоты. </div>
+      </section>
+      <section class="panel work__zero">
+        <div class="zero__blur">
+          <h2 class="zero__title">OXXXYMIRON</h2>
+          <h3 class="zero__subtitle">cтихи о <br> неизвестном <br> солдате</h3>
+          <div class="zero__subtitle_mob">cтихи о неизвестном солдате</div>
+          <div class="zero__text">Produced by: Omut Studio & Red Pepper Film <br>
+            CG Postproduction by: dobro & Azamat Sayfullaev<br>
+            Directed by:  Dima Maseykin<br>
+            Director of photography: Roman Sivozhelezov <br>
+            Story by: Roma Liberov <br>
+            Creative producer: Danil Golovanov <br>
+            Producer: Alexander Stoletov & Pavel Guryev <br>
+            Executive producer: Marina Bulantseva <br>
+            Line producer: Serafima Albaut <br>
+            Stage manager: Pavel Fedorov
           </div>
-          <div class="team__person">
-            <img src="img/photo_4.png" class="team__photo"></img>
-            <div class="team__name four">Вероника </div>
-            <div class="team__lastname four">Роот</div>
-            <div class="team__position">Арт директор</div>
-            <div class="team__text">В каждую работу вносит смысловую сложность, выстраивая уникальные визуальные истории.  Наработанный персональный стиль включает элементы барокко, символизма и постмодернистских направлений.</div>
+          <div class="zero__text_mob">
+            <div class="zero__row_mob">Produced by: <br> Omut Studio & Red Pepper Film</div>
+            <div class="zero__row_mob">CG Postproduction by: <br> dobro & Azamat Sayfullaev </div>
+            <div class="zero__row_mob">Directed by: <br> Dima Maseykin </div>
+            <div class="zero__row_mob">Director of photography: <br> Roman Sivozhelezov</div>
           </div>
+          <div class="zero__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>   
         </div>
-      </div>
-    </div>
-    <div class="scroll__container" id="well">
+        <div class="modal zero__modal">
+          <iframe class="video zero__video" src="https://www.youtube.com/embed/Rs8aq-e_J4M" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+        </div>
+      </section>
       <section class="panel work__one">
         <div class="one__blur">
-          <div class="one__title">Molchat Doma</div>
-          <div class="one__subtitle">Otveta Net </div>
+          <h2 class="one__title">Molchat Doma</h2>
+          <h3 class="one__subtitle">Otveta Net </h3>
           <div class="one__subtitle_text">music video</div>
           <div class="one__text">Produced by: Alexander Stoletov & Marina Bulantseva <br>
             Director: Ira Rokka <br>
@@ -119,13 +92,16 @@
             <div class="one__row_mob">Director of Photography: <br> Valeriia Jonsen </div>
             <div class="one__row_mob">Production designer: <br> Elena Lavur</div>
           </div>
-          <div class="one__play">Watch</div>  
+          <div class="one__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal one__modal">
+          <iframe class="video one__video" src="https://www.youtube.com/embed/XxoQiIYq5oA" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__two">
         <div class="two__blur">
-          <div class="two__title">Bat Norton</div>
-          <div class="two__subtitle">FEAR OF ME, <br> MYSELF AND I </div>
+          <h2 class="two__title">Bat Norton</h2>
+          <h3 class="two__subtitle">FEAR OF ME, <br> MYSELF AND I </h3>
           <div class="two__text">Executive Producer / Creative: Marina Bulantseva<br>
              Director on set: Ira Rokka <br>
              Cinematographer: Valeriia Johnsen<br>
@@ -137,13 +113,16 @@
             <div class="two__row_mob">Cinematographer: <br> Valeriia Jonsen </div>
             <div class="two__row_mob">Line producer: <br> Alexander Stoletov</div>
           </div>
-          <div class="two__play">Watch</div>  
+          <div class="two__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div> 
+        </div>
+        <div class="modal two__modal">
+          <iframe class="video two__video" src="https://player.vimeo.com/video/495762439?h=675b58b800" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__three">
         <div class="three__blur">
-          <div class="three__title">TEO</div>
-          <div class="three__subtitle">Hunter</div>
+          <h2 class="three__title">TEO</h2>
+          <h3 class="three__subtitle">Hunter</h3>
           <div class="three__subtitle_text">music video</div>
           <div class="three__text">Executive Producer: Marina Bulantseva<br>
             Director: Maria Reshetnikova<br>
@@ -156,7 +135,10 @@
             <div class="three__row_mob">Cinematographer: <br> Valeriia Johnsen</div>
             <div class="three__row_mob">Producer: <br> Roman Maximov</div>
           </div>
-          <div class="three__play">Watch</div>  
+          <div class="three__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal left__modal three__modal">
+          <iframe class="video three__video" src="https://player.vimeo.com/video/485063014?h=5960f77c81" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__four">
@@ -167,8 +149,8 @@
             in collaboration with community Svoboda <br> 
             Zvuka and M’ARS Center of Contemporary Art
           </div>
-          <div class="four__title">DNA</div>
-          <div class="four__subtitle">010110 </div>
+          <h2 class="four__title">DNA</h2>
+          <h3 class="four__subtitle">010110 </h3>
           <div class="four__text">Executive Producer: Marina Bulantseva<br>
             Director / Art director: Ira Rokka<br>
             Director of Photography: Valeriia Johnsen<br>
@@ -180,13 +162,16 @@
             <div class="four__row_mob">Director of Photography: <br> Valeriia Johnsen</div>
             <div class="four__row_mob">Screenwriter: <br> Alexander Stoletov </div>
           </div>
-          <div class="four__play">Watch</div>  
+          <div class="four__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal four__modal">
+          <iframe class="video four__video" src="https://player.vimeo.com/video/464214504?h=1341906a8d" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__five">
         <div class="five__blur">
-          <div class="five__title">Little</div>
-          <div class="five__subtitle">Grave </div>
+          <h2 class="five__title">Little</h2>
+          <h3 class="five__subtitle">Grave </h3>
           <div class="five__text">Idea and director: Valeriia Johnsen<br>
             Cinematographer: Karim Imamiev<br>
             Producer: Ashes are falling apart<br>
@@ -198,13 +183,16 @@
             <div class="five__row_mob">Producer: <br> Ashes are falling apart </div>
             <div class="five__row_mob">Production designer: <br> Memorial to the soul </div>
           </div>
-          <div class="five__play">Watch</div>  
+          <div class="five__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal five__modal">
+          <iframe class="video five__video" src="https://player.vimeo.com/video/440284952?h=d282262110" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__six">
         <div class="six__blur">
-          <div class="six__title">Hypsoline</div>
-          <div class="six__subtitle">Jewelry</div>
+          <h2 class="six__title">Hypsoline</h2>
+          <h3 class="six__subtitle">Jewelry</h3>
           <div class="six__text">Idea and director: Valeriia Johnsen<br>
             Cinematographer: Karim Imamiev<br>
             Art director: Veronica Roth<br>
@@ -218,13 +206,16 @@
             <div class="six__row_mob">Produced by <br> Ashes are falling apart</div>
             <div class="six__row_mob">Production designer: <br> Memorial to the soul </div>
           </div>
-          <div class="six__play">Watch</div>  
+          <div class="six__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal left__modal six__modal">
+          <iframe class="video six__video" src="https://player.vimeo.com/video/410906054?h=0f8ab72fe3" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__seven">
         <div class="seven__blur">
-          <div class="seven__title">Hypsoline</div>
-          <div class="seven__subtitle">Jewelry</div>
+          <h2 class="seven__title">Hypsoline</h2>
+          <h3 class="seven__subtitle">Jewelry</h3>
           <div class="seven__text">Idea and director: Valeriia Johnsen<br>
             Cinematographer: Karim Imamiev<br>
             Art director: Veronica Roth<br>
@@ -238,13 +229,16 @@
             <div class="seven__row_mob">Produced by <br> Ashes are falling apart</div>
             <div class="seven__row_mob">Production designer: <br> Memorial to the soul </div>
           </div>
-          <div class="seven__play">Watch</div>  
+          <div class="seven__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal left__modal seven__modal">
+          <iframe class="video seven__video" src="https://player.vimeo.com/video/520717815?h=4760fdb179" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
       <section class="panel work__eight">
         <div class="eight__blur">
-          <div class="eight__title">PHO</div>
-          <div class="eight__subtitle">FIGHTERS</div>
+          <h2 class="eight__title">PHO</h2>
+          <h3 class="eight__subtitle">FIGHTERS</h3>
           <div class="eight__text">Written and Directed by Valeriia Johnsen, Karim Imamiev<br>
             Cinematography by Karim Imamiev, Valeriia Johnsen<br>
             Producer: Elizaveta Lavrukhina<br>
@@ -258,7 +252,10 @@
             <div class="eight__row_mob">Co-Producers:<br> Valeriia Johnsen, Karim Imamiev</div>
             <div class="eight__row_mob">Production Designer: <br> Yury Nikiforov </div>
           </div>
-          <div class="eight__play">Watch</div>  
+          <div class="eight__play">Watch <img class="play__btn" src="img/play-button.svg" alt="icon"></div>  
+        </div>
+        <div class="modal left__modal eight__modal">
+          <iframe class="video eight__video" src="https://player.vimeo.com/video/334406153?h=76a1f70930" title="YouTube video player" allow="autoplay; fullscreen; picture-in-picture"></iframe>
         </div>
       </section>
     </div>
@@ -266,11 +263,8 @@
     <div class="scroll__icon">
       <img class="scroll__img" src="img/scroll.svg" alt="scroll">
     </div>
-    <div class="scroll__icon_mob">
-      <div class="scroll__img_mob">scroll</div>
-    </div>
   </div>
-  
+  <script src="js/docSlider.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
