@@ -55,6 +55,7 @@ docSlider.init({
 });
 
 logoBtn.addEventListener('click', () => docSlider.jumpPage('main'));
+document.querySelector('.nav__link_phone').addEventListener('click', () => docSlider.jumpPage('main'));
 
 // VIDEO
 

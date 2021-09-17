@@ -30,6 +30,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
 
 .main.main-active{
@@ -54,6 +55,9 @@
 	}
 }
 
+.play__btn{
+  width: 36px;
+}
 
 .main__center{
   display: flex;
@@ -83,6 +87,13 @@
   margin-bottom: 60px;
   text-transform: uppercase;
   font-size: 16px;
+  color: white;
+}
+
+.main__col{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 @media (max-width: 800px){
@@ -120,6 +131,7 @@
   .main__col{
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
   }
 
   .main__info{
@@ -135,13 +147,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 140px 0 140px;
+  padding: 30px 140px 0 140px;
   width: 100%;
   z-index: 2;
 }
 
 .nav__logo{
-  max-width: 60px;
+  max-width: 50px;
   transition: all 3s;
   cursor: pointer;
 }
@@ -177,11 +189,12 @@
 .nav__back-active{
   display: flex;
 }
+
 @media (max-width: 800px){
   .nav{
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px 30px 24px 30px;
+    padding: 20px 20px 20px 20px;
   }
 
   .nav__logo{
@@ -200,8 +213,10 @@
     margin-left: 34px;
   }
 
-  .nav__links_mob{
+  .nav__links_mob a{
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav__links_mob-hidden{
@@ -214,7 +229,7 @@
 .scroll__icon{
   position: fixed;
   bottom: 94px;
-  padding-left: 140px;
+  padding-left: 25px;
   animation: shake 3s ease 0s infinite;
   -webkit-animation: shake 3s ease 0s infinite;
 }
@@ -276,9 +291,8 @@
 .zero__blur{
   background: linear-gradient( to right,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
-  width: 50%;
   height: 100%;
-  padding: 0 140px 0 84px;
+  padding: 50px 140px 0 84px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,9 +305,9 @@
 
 .zero__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 50px;
   white-space: nowrap;
-  line-height: 30px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px white;
   position: relative;
@@ -301,28 +315,30 @@
 
 .zero__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 50px;
   white-space: nowrap;
   position: relative;
-  line-height: 100px;
   text-align: right;
 }
 
 .zero__text{
   font-size: 18px;
+  margin-top: 40px;
   position: relative;
-  margin-top: 69px;
 }
 
 .zero__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
   position: relative;
   text-align: right;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .zero__text_mob{
@@ -330,6 +346,9 @@
   position: relative;
 }
 
+.zero__subtitle_mob{
+  display: none;
+}
 
 @media (max-width: 800px){
   .work__zero{
@@ -354,21 +373,30 @@
   }
 
   .zero__title{
-    font-size: 36px;
+    font-size: 32px;
     margin-left: 0;
     line-height: 30px;
     width: 90%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
   }
   
   .zero__subtitle{
-    font-size: 30px;
-    margin-left: 0;
+    display: none;
+  }
+
+  .zero__subtitle_mob{
+    display: inline;
+    font-size: 24px;
     width: 90%;
-    text-align: right;
+    text-align: center;
     line-height: 20px;
-    margin-bottom: 32px;
+    margin-bottom: 5px;
+    font-weight: 900;
+  }
+
+  .zero__row_mob{
+    margin-bottom: 10px;
   }
   
   .zero__text{
@@ -378,11 +406,6 @@
   .zero__text_mob{
     display: block;
     font-size: 16px;
-
-  }
-
-  .zero__row_mob{
-    margin-bottom: 15px;
   }
 
   .zero__play{
@@ -392,7 +415,11 @@
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .zero__row_mob{
+    margin-bottom: 0;
+  }
+}
 /* WORK ONE */
 
 .work__one{
@@ -408,7 +435,6 @@
 .one__blur{
   background: linear-gradient( to right,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
-  width: 39%;
   height: 100%;
   padding: 0 140px 0 84px;
   display: flex;
@@ -423,10 +449,10 @@
 
 .one__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
   margin-left: -245px;
-  line-height: 30px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px white;
   position: relative;
@@ -434,38 +460,41 @@
 
 .one__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
   margin-left: -30px;
   white-space: nowrap;
   position: relative;
 }
 
 .one__subtitle_text{
-  margin-top: -32px;
+  margin-top: -20px;
   font-size: 24px;
-  margin-bottom: 69px;
   position: relative;
 }
 
 .one__text{
   font-size: 18px;
+  margin-top: 40px;
   position: relative;
 }
 
 .one__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
   position: relative;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .one__text_mob{
   display: none;
   position: relative;
 }
+
 
 @media (max-width: 800px){
   .work__one{
@@ -493,7 +522,6 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 90%;
     text-align: left;
     -webkit-text-stroke: 1px white;
   }
@@ -501,16 +529,16 @@
   .one__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 90%;
-    text-align: right;
+    text-align: center;
+    margin-bottom: 5px;
   }
   
   .one__subtitle_text{
     margin-top: -40px;
     font-size: 18px;
-    width: 90%;
     text-align: left;
     margin-bottom: 32px;
+    display: none;
   }
   
   .one__text{
@@ -534,6 +562,12 @@
   }
 }
 
+@media(max-height:665px){
+  .one__row_mob{
+    margin-bottom: 0;
+  }
+}
+
 /* WORK TWO */
 
 .work__two{
@@ -547,7 +581,6 @@
 .two__blur{
   background: linear-gradient( to right,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
-  width: 50%;
   height: 100%;
   padding: 0 65px 0 45px;
   color: white;
@@ -562,9 +595,9 @@
 
 .two__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 60px;
   white-space: nowrap;
-  line-height: 85px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px white;
   position: relative;
@@ -573,8 +606,8 @@
 .two__subtitle{
   font-weight: 900;
   font-size: 70px;
-  white-space: nowrap;
   line-height: 60px;
+  white-space: nowrap;
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -591,12 +624,14 @@
 
 .two__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
   position: relative;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .two__text_mob{
@@ -630,18 +665,16 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 90%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
   }
   
   .two__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 90%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   
   .two__text{
@@ -664,7 +697,11 @@
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .two__row_mob{
+    margin-bottom: 0;
+  }
+}
 /* WORK three */
 
 .work__three{
@@ -677,7 +714,6 @@
 .three__blur{
   background: linear-gradient( to left,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
-  width: 36%;
   height: 100%;
   padding: 0 60px 0 140px;
   color: white;
@@ -692,9 +728,9 @@
 
 .three__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
-  line-height: 85px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px white;
   position: relative;
@@ -702,19 +738,17 @@
 
 .three__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
   white-space: nowrap;
-  line-height: 100px;
   display: flex;
   justify-content: flex-end;
   position: relative;
 }
 
 .three__subtitle_text{
-  margin-top: -22px;
+  margin-top: -20px;
   margin-left: 144px;
   font-size: 24px;
-  margin-bottom: 69px;
   position: relative;
 }
 
@@ -730,13 +764,14 @@
 .three__play{
   font-family: 'onyx_btregular';
   position: relative;
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .three__text_mob{
@@ -771,18 +806,16 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
   }
   
   .three__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 50%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .three__subtitle_text{
@@ -804,9 +837,15 @@
 
   .three__play{
     font-size: 36px;
+    margin: 0;
     margin-top: -400px;
     width: 90%;
     text-align: right;
+  }
+}
+@media(max-height:665px){
+  .three__row_mob{
+    margin-bottom: 0;
   }
 }
 
@@ -823,9 +862,7 @@
 .four__blur{
   background: linear-gradient( to right,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
-  width: 40%;
-  height: 100%;
-  padding: 0 204px 0 143px;
+  padding: 0 140px 0 140px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -840,16 +877,15 @@
   font-size: 18px;
   color: #FFFFFF;
   opacity: 0.31;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   position: relative;  
 }
 
 .four__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
-  line-height: 85px;
-  margin-left: -180px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px white;
   position: relative;  
@@ -857,9 +893,9 @@
 
 .four__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  margin-left: -40px;
   white-space: nowrap;
-  line-height: 100px;
   position: relative;  
   
 }
@@ -867,19 +903,21 @@
 .four__text{
   margin-left: -40px;
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 30px;
   position: relative;  
 }
 
 
 .four__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
-  position: relative;  
+  position: relative; 
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .four__text_mob{
@@ -918,18 +956,16 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
   }
   
   .four__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 50%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .four__subtitle_text{
@@ -956,7 +992,11 @@
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .four__row_mob{
+    margin-bottom: 0;
+  }
+}
 /* WORK FIVE */
 
 .work__five{
@@ -970,9 +1010,8 @@
 .five__blur{
   background: linear-gradient( to right,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
-  width: 37%;
   height: 100%;
-  padding: 0 235px 0 28px;
+  padding: 0 140px 0 28px;
   color: white;
   min-width: 30%;
   display: flex;
@@ -986,9 +1025,9 @@
 
 .five__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
-  line-height: 85px;
   display: flex;
   justify-content: flex-end;
   -webkit-text-fill-color: transparent;
@@ -998,29 +1037,31 @@
 
 .five__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  text-align: center;
+  line-height: 60px;
   white-space: nowrap;
-  line-height: 100px;
   position: relative;
 }
 
 .five__text{
   font-size: 18px;
-  margin-top: 70px;
+  margin-top: 40px;
   position: relative;
 }
 
 
 .five__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
-  justify-content: flex-end;
-  display: flex;
+  margin-left: auto;
   position: relative;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .five__text_mob{
@@ -1058,8 +1099,7 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
     justify-content: flex-start;
   }
@@ -1067,10 +1107,9 @@
   .five__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 50%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .five__subtitle_text{
@@ -1091,13 +1130,18 @@
   }
 
   .five__play{
+    margin: 0;
     font-size: 36px;
     margin-top: -400px;
     width: 90%;
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .five__row_mob{
+    margin-bottom: 0;
+  }
+}
 /* WORK SIX */
 
 .work__six{
@@ -1111,7 +1155,6 @@
   background: linear-gradient( to left,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
   position: relative;
-  width: 45%;
   height: 100%;
   padding: 0 225px 0 140px;
   color: white;
@@ -1125,9 +1168,9 @@
 
 .six__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
-  line-height: 85px;
   display: flex;
   justify-content: flex-end;
   -webkit-text-fill-color: transparent;
@@ -1137,15 +1180,14 @@
 
 .six__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
   white-space: nowrap;
-  line-height: 100px;
   position: relative;
 }
 
 .six__text{
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -1154,14 +1196,15 @@
 
 .six__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  margin-top: 40px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
   cursor: pointer;
-  justify-content: flex-end;
-  display: flex;
+  margin-left: auto;
   position: relative;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .six__text_mob{
@@ -1200,18 +1243,16 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
   }
   
   .six__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 50%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .six__subtitle_text{
@@ -1228,17 +1269,25 @@
   }
 
   .six__row_mob{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .six__play{
     font-size: 36px;
+    margin: 0;
     margin-top: -400px;
     width: 90%;
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .six__row_mob{
+    margin-bottom: 0;
+  }
+  .six__row_mob:last-child{
+    display: none;
+  }
+}
 
 /* WORK SEVEN */
 
@@ -1253,7 +1302,6 @@
   background: linear-gradient( to left,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
   position: relative;
-  width: 38%;
   height: 100%;
   padding: 0 65px 0 140px;
   color: white;
@@ -1267,9 +1315,9 @@
 
 .seven__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
-  line-height: 85px;
   display: flex;
   justify-content: flex-end;
   -webkit-text-fill-color: transparent;
@@ -1279,7 +1327,7 @@
 
 .seven__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
   white-space: nowrap;
   line-height: 100px;
   position: relative;
@@ -1287,23 +1335,22 @@
 
 .seven__text{
   font-size: 18px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: flex-end;
+  margin-top: 40px;
+  text-align: right;
   position: relative;
 }
 
 
 .seven__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
+  margin-top: 40px;
   cursor: pointer;
-  justify-content: flex-end;
-  display: flex;
   position: relative;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .seven__text_mob{
@@ -1343,18 +1390,16 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
   }
   
   .seven__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 50%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .seven__subtitle_text{
@@ -1371,7 +1416,7 @@
   }
 
   .seven__row_mob{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .seven__play{
@@ -1381,7 +1426,14 @@
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .seven__row_mob{
+    margin-bottom: 0;
+  }
+  .seven__row_mob:last-child{
+    display: none;
+  }
+}
 /* WORK EIGHT  */
 
 .work__eight{
@@ -1396,7 +1448,6 @@
   background: linear-gradient( to right,rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
   backdrop-filter: blur(10px);
   position: relative;
-  width: 40%;
   height: 100%;
   padding: 0 140px 0 100px;
   color: white;
@@ -1410,11 +1461,10 @@
 
 .eight__title{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  line-height: 30px;
   white-space: nowrap;
-  line-height: 85px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px white;
   position: relative;
@@ -1422,15 +1472,15 @@
 
 .eight__subtitle{
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
+  text-align: center;
   white-space: nowrap;
-  line-height: 100px;
   position: relative;
 }
 
 .eight__text{
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -1439,12 +1489,14 @@
 
 .eight__play{
   font-family: 'onyx_btregular';
-  font-size: 56px;
+  font-size: 46px;
   text-decoration: none;
   color: white;
-  margin-top: 69px;
+  margin-top: 40px;
   cursor: pointer;
   position: relative;
+  animation: shake 3s ease 0s infinite;
+  -webkit-animation: shake 3s ease 0s infinite;
 }
 
 .eight__text_mob{
@@ -1484,8 +1536,7 @@
     font-size: 36px;
     margin-left: 0;
     line-height: 30px;
-    width: 50%;
-    text-align: left;
+    text-align: center;
     -webkit-text-stroke: 1px white;
     justify-content: initial;
   }
@@ -1493,10 +1544,9 @@
   .eight__subtitle{
     font-size: 30px;
     margin-left: 0;
-    width: 50%;
-    text-align: right;
+    text-align: center;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .eight__subtitle_text{
@@ -1523,7 +1573,14 @@
     text-align: right;
   }
 }
-
+@media(max-height:665px){
+  .eight__row_mob{
+    margin-bottom: 0;
+  }
+  .eight__row_mob:last-child{
+    display: none;
+  }
+}
 /* MENU */
 
 .menu{
@@ -1553,7 +1610,6 @@
 .menu__words_col{
   display: flex;
   flex-direction: column;
-  min-width: 50%;
 }
 
 .menu__word_title{
@@ -1598,29 +1654,45 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 157px;
-  margin-bottom: ;
+  margin-top: 150px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 150px;
 }
 
 .menu__item{
   display: flex;
   text-align: center;
-  width: 536px;
-  height: 434px;
+  height: 100%;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  margin-bottom: 175px;
+  margin: 100px 50px;
+  position: relative;
 }
 
-.menu__item.one{
-  background: url('../img/numb_1.png') center no-repeat;
+.menu__item::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'onyx_btregular';
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 300px;
 }
-.menu__item.two{
-  background: url('../img/numb_2.png') center no-repeat;
+.menu__item.one::after{
+  content: "01";
 }
-.menu__item.three{
-  background: url('../img/numb_3.png') center no-repeat;
+
+.menu__item.two::after{
+  content: "02";
+}
+.menu__item.three::after{
+  content: "03";
 }
 
 .menu__team{
@@ -1631,8 +1703,15 @@
   flex-wrap: wrap;
 }
 
+.team__col{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .team__person{
-  width: 536px;
+  width: 30%;
+  flex-wrap: wrap;
   text-align: center;
   margin-bottom: 73px;
 }
@@ -1656,8 +1735,7 @@
 }
 
 .team__name.four{
-  text-align: right;
-  margin-right: -150px;
+  text-align: left;
 }
 
 .team__lastname{
@@ -1665,7 +1743,9 @@
     font-size: 60px;
     text-align: right;
 }
-
+.team__lastname.four{
+  text-align: center;
+}
 .team__position{
   font-size: 30px;
   margin-bottom: 30px;
@@ -1675,8 +1755,75 @@
   font-size: 20px;
 }
 
-.team__col:first-child{
-  margin-right: 154px;
+@media (max-width: 800px){
+  .menu__word_subtitle{
+    text-align: center;
+  }
+  .menu__word_subtitle.bottom{
+    margin: 0;
+  }
+  .team__col{
+    flex-direction: column;
+    align-items: center;
+  }
+  .team__person{
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .nav__links{
+    margin-left: auto;
+  }
+  .nav__link{
+    margin: 0;
+  }
+}
+
+@media (max-width: 650px){
+  .menu__word_title{
+    font-size: 36px;
+  }
+  .menu__word_subtitle{
+    font-size: 36px;
+  }
+  .menu__title{
+    padding-top: 180px;
+  }
+  .menu__word_subtitle.top{
+    margin-bottom: 15px;
+  }
+  .menu__subtitle{
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .menu__list{
+    margin-top: 100px;
+  }
+  .menu__item{
+    font-size: 18px;
+  }
+  .team__name{
+    font-size: 45px;
+  }
+  .team__lastname{
+    font-size: 45px;
+  }
+  .team__position{
+    font-size: 24px;
+  }
+  .team__text{
+    font-size: 18px;
+  }
+  .menu__team{
+    padding-bottom: 100px;
+  }
+  .team__photo{
+    max-width: 100%;
+  }
 }
 
 
@@ -1693,7 +1840,7 @@
   }
 }
 
-/* VIDO */
+/* VIDEO */
 
 .modal{
   position: absolute;
